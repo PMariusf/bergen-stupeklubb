@@ -105,7 +105,7 @@ export default function CoachesPage() {
               src="/images/coach-feedback.webp"
               alt="Trener som gir veiledning ved stupebassenget"
               fill
-              priority
+              loading="eager"
               quality={88}
               sizes="(min-width: 1024px) 45vw, 100vw"
               className="object-cover"

@@ -89,7 +89,7 @@ export default function MembershipPage() {
               src="/images/diving-practice.webp"
               alt="Stuper i luften under trening i Ado Arena"
               fill
-              priority
+              loading="eager"
               sizes="(min-width: 1024px) 45vw, 100vw"
               className="object-cover"
             />

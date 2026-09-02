@@ -24,7 +24,7 @@ export default function HomePage() {
           src="/images/diving-practice.webp"
           alt=""
           fill
-          priority
+          loading="eager"
           quality={90}
           sizes="100vw"
           className="-z-20 object-cover object-center"
