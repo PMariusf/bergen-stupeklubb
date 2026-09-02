@@ -38,7 +38,8 @@ export default function HomePage() {
             </p>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-              Vil du lære deg å stupe?
+              Vil du lære deg 
+              å stupe?
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
