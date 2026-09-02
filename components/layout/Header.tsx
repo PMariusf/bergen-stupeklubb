@@ -21,7 +21,7 @@ export default function Header() {
     pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#06162d]/95 text-white backdrop-blur">
+    <header className="sticky top-0 z-70 border-b border-white/10 bg-[#06162d]/95 text-white backdrop-blur">
       <div className="mx-auto flex h-20 w-full items-center justify-between px-4 lg:px-5 xl:px-6">
         <Link
           href="/"
