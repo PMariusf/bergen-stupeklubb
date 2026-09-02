@@ -22,11 +22,11 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-70 border-b border-white/10 bg-[#06162d]/95 text-white backdrop-blur">
-      <div className="mx-auto flex h-20 w-full items-center justify-between px-4 lg:px-5 xl:px-6">
+      <div className="mx-auto flex h-30 w-full items-center justify-between px-4 lg:px-5 xl:px-6">
         <Link
           href="/"
           aria-label="Bergen Stupeklubb – forsiden"
-          className="group flex items-center gap-3 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+          className="group flex items-center gap-4 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
           onClick={() => setMenuOpen(false)}
         >
           <span
@@ -40,9 +40,9 @@ export default function Header() {
             <span className="absolute left-6 top-[2.875rem] h-0.5 w-7 rounded-full bg-white transition-transform delay-200 duration-500 ease-out group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transform-none" />
           </span>
 
-          <span className="text-lg font-medium leading-[1.15] transition duration-500 group-hover:translate-x-1 group-hover:text-cyan-200 group-focus-visible:translate-x-1 group-focus-visible:text-cyan-200 motion-reduce:transform-none">
+          <span className="text-[1.55rem] font-bold leading-[1.15] transition duration-500 group-hover:translate-x-1 group-hover:text-cyan-200 group-focus-visible:translate-x-1 group-focus-visible:text-cyan-200 motion-reduce:transform-none">
             <span className="block">Bergen</span>
-            <span className="block">Stupeklubb</span>
+            <span className="block translate-x-8">Stupeklubb</span>
           </span>
         </Link>
 
