@@ -25,18 +25,24 @@ export default function Header() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
         <Link
           href="/"
-          className="flex items-center gap-3"
+          aria-label="Bergen Stupeklubb – forsiden"
+          className="group flex items-center gap-3 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
           onClick={() => setMenuOpen(false)}
         >
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-cyan-400 font-black text-[#06162d]">
-            BSK
+          <span
+            className="relative h-12 w-14 shrink-0"
+            aria-hidden="true"
+          >
+            <span className="absolute left-6 top-1 h-0.5 w-7 rounded-full bg-white transition-transform duration-500 ease-out group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transform-none" />
+            <span className="absolute left-0 top-3.5 h-0.5 w-[1.15rem] rounded-full bg-white transition-transform delay-75 duration-500 ease-out group-hover:-translate-x-1 group-focus-visible:-translate-x-1 motion-reduce:transform-none" />
+            <span className="absolute left-8 top-6 h-0.5 w-[1.15rem] rounded-full bg-white transition-transform delay-100 duration-500 ease-out group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transform-none" />
+            <span className="absolute left-0 top-[2.125rem] h-0.5 w-[1.15rem] rounded-full bg-white transition-transform delay-150 duration-500 ease-out group-hover:-translate-x-1 group-focus-visible:-translate-x-1 motion-reduce:transform-none" />
+            <span className="absolute left-6 top-[2.875rem] h-0.5 w-7 rounded-full bg-white transition-transform delay-200 duration-500 ease-out group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transform-none" />
           </span>
 
-          <span className="leading-tight">
-            <span className="block font-bold tracking-wide">
-              Bergen Stupeklubb
-            </span>
-            <span className="block text-sm text-cyan-200">Ado Arena</span>
+          <span className="text-lg font-medium leading-[1.15] transition duration-500 group-hover:translate-x-1 group-hover:text-cyan-200 group-focus-visible:translate-x-1 group-focus-visible:text-cyan-200 motion-reduce:transform-none">
+            <span className="block">Bergen</span>
+            <span className="block">Stupeklubb</span>
           </span>
         </Link>
 
