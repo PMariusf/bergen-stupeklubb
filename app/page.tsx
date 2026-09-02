@@ -30,7 +30,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#041124]/95 via-[#06162d]/80 to-[#06162d]/45" />
 
-        <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-14 px-5 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
+        <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-[96rem] items-center gap-14 px-5 py-20 lg:grid-cols-[1.35fr_0.65fr] lg:gap-24 lg:px-8 xl:gap-32">
           <div>
             <p className="mb-5 text-sm font-bold uppercase tracking-[0.22em] text-cyan-300">
               Bergen · Ado Arena

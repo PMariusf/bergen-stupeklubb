@@ -22,7 +22,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#06162d]/95 text-white backdrop-blur">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-[96rem] items-center justify-between px-5 lg:px-8">
         <Link
           href="/"
           aria-label="Bergen Stupeklubb – forsiden"
@@ -46,7 +46,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Hovedmeny">
+        <nav className="hidden items-center gap-7 lg:flex xl:gap-8" aria-label="Hovedmeny">
           {navigation.map((item) => (
             <Link
               key={item.href}
