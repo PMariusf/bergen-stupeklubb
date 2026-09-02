@@ -1,8 +1,19 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <section className="hero-background relative isolate min-h-[calc(100vh-5rem)] overflow-hidden text-white">
+    <section className="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden bg-[#06162d] text-white">
+      <Image
+        src="/images/hero-diver.webp"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="-z-20 object-cover"
+      />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#041124]/95 via-[#06162d]/80 to-[#06162d]/45" />
+
       <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-14 px-5 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
         <div>
           <p className="mb-5 text-sm font-bold uppercase tracking-[0.22em] text-cyan-300">
@@ -35,7 +46,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <aside className="rounded-3xl border border-white/15 bg-white/10 p-7 shadow-2xl backdrop-blur sm:p-9">
+        <aside className="rounded-3xl border border-white/15 bg-[#06162d]/65 p-7 shadow-2xl backdrop-blur sm:p-9">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-300">
             Ny i stuping?
           </p>
