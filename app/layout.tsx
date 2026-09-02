@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nb">
+    <html lang="nb" data-scroll-behavior="smooth">
       <body className={`${geist.variable} flex min-h-screen flex-col`}>
         <Header />
         <main className="flex-1">{children}</main>
