@@ -21,14 +21,15 @@ export default function HomePage() {
     <div className="overflow-hidden">
       <section className="relative isolate min-h-[calc(100vh-5rem)] overflow-hidden bg-[#06162d] text-white">
         <Image
-          src="/images/hero-diver.webp"
+          src="/images/diving-practice.webp"
           alt=""
           fill
           priority
+          quality={90}
           sizes="100vw"
-          className="-z-20 object-cover"
+          className="-z-20 object-cover object-center"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#041124]/95 via-[#06162d]/80 to-[#06162d]/45" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#041124]/82 via-[#06162d]/58 to-[#06162d]/25" />
 
         <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-[96rem] items-center gap-14 px-5 py-20 lg:grid-cols-[1.35fr_0.65fr] lg:gap-24 lg:px-8 xl:gap-32">
           <div>
@@ -192,8 +193,8 @@ export default function HomePage() {
             <article className="overflow-hidden rounded-3xl bg-[#06162d] text-white shadow-sm">
               <div className="relative aspect-[16/10]">
                 <Image
-                  src="/images/diving-practice.webp"
-                  alt="Stuper i luften under trening i Ado Arena"
+                  src="/images/hero-diver.webp"
+                  alt="Stuptrening i Ado Arena"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
