@@ -9,6 +9,9 @@ const footerLinks = [
   { href: "/sponsing", label: "Sponsing" },
 ];
 
+const focusClass =
+  "rounded-sm transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300";
+
 export default function Footer() {
   return (
     <footer className="bg-[#041124] text-white">
@@ -27,7 +30,7 @@ export default function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-slate-300 transition hover:text-white"
+                className={`text-slate-300 ${focusClass}`}
               >
                 {item.label}
               </Link>
@@ -42,13 +45,13 @@ export default function Footer() {
             <p>
               <a
                 href="mailto:hovedtrener@bergen-stupeklubb.no"
-                className="transition hover:text-white"
+                className={`break-all ${focusClass}`}
               >
                 hovedtrener@bergen-stupeklubb.no
               </a>
             </p>
             <p>
-              <a href="tel:+4793299995" className="transition hover:text-white">
+              <a href="tel:+4793299995" className={focusClass}>
                 +47 932 99 995
               </a>
             </p>
@@ -59,7 +62,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between lg:px-8">
           <p>© {new Date().getFullYear()} Bergen Stupeklubb</p>
-          <Link href="/kontakt" className="transition hover:text-white">
+          <Link href="/kontakt" className={focusClass}>
             Kontakt oss
           </Link>
         </div>

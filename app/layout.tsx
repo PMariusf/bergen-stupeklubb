@@ -72,8 +72,16 @@ export default function RootLayout({
   return (
     <html lang="nb" data-scroll-behavior="smooth">
       <body className={`${geist.variable} flex min-h-screen flex-col`}>
+        <a
+          href="#main-content"
+          className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-cyan-400 px-5 py-3 font-bold text-[#06162d] shadow-xl transition focus:translate-y-0 focus:outline-2 focus:outline-offset-4 focus:outline-white motion-reduce:transition-none"
+        >
+          Hopp til hovedinnhold
+        </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
+          {children}
+        </main>
         <Footer />
         <script
           type="application/ld+json"
