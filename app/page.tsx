@@ -32,7 +32,8 @@ export default function HomePage() {
           alt=""
           fill
           loading="eager"
-          quality={90}
+          fetchPriority="high"
+          quality={75}
           sizes="100vw"
           className="-z-20 object-cover object-center"
         />
@@ -267,13 +268,13 @@ export default function HomePage() {
       <section className="bg-cyan-400 py-16">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 md:flex-row md:items-center lg:px-8">
           <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-950/70">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#06162d]">
               Sponsing og samarbeid
             </p>
             <h2 className="mt-3 text-3xl font-black tracking-tight text-[#06162d] sm:text-4xl">
               Sammen skaper vi aktivitet og idrettsglede
             </h2>
-            <p className="mt-3 text-lg leading-8 text-cyan-950/80">
+            <p className="mt-3 text-lg leading-8 text-[#06162d]">
               Som samarbeidspartner bidrar du til et trygt og inkluderende
               stupemiljø i Bergen.
             </p>
