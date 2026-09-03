@@ -102,7 +102,7 @@ export default function ConsentPage() {
         <section className="bg-white py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <header className="max-w-3xl">
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-c-700">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-700">
                 Retningslinjer
               </p>
               <h2 className="mt-4 text-4xl font-black tracking-tight text-[#06162d] sm:text-5xl">
