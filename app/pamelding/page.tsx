@@ -198,6 +198,13 @@ export default function RegistrationPage() {
               innsendingen kobles til, legger vi også inn sikker lagring og en
               tydelig personverntekst.
             </p>
+            <Link
+              href="/samtykkeerklaring"
+              className="mt-7 inline-flex items-center gap-2 font-bold text-cyan-800 underline decoration-cyan-300 decoration-2 underline-offset-4 transition hover:text-cyan-600"
+            >
+              Les om samtykke til bilder og film
+              <span aria-hidden="true">→</span>
+            </Link>
           </article>
 
           <article className="rounded-3xl bg-cyan-400 p-8 text-[#06162d] sm:p-10">
