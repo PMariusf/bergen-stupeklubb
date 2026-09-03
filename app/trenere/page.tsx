@@ -1,37 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  competitionCoaches,
+  divingSchoolCoaches,
+  leadCoaches,
+  specialCoaches,
+} from "@/lib/coaches";
 
 export const metadata: Metadata = {
   title: "Våre trenere",
   description:
     "Møt trenerteamet i Bergen Stupeklubb og se hvem som følger opp de ulike treningsgruppene.",
 };
-
-const competitionCoaches = [
-  { name: "Claus Gundersen jr.", role: "Rekrutt" },
-  { name: "Trygve Pedersen", role: "Rekrutt og elite" },
-  { name: "Vårin Renate Andvik Holm", role: "Rekrutt" },
-  { name: "Julie Synnøve Thorsen", role: "Rekrutt" },
-  { name: "Oda Prestegård Finne", role: "Rekrutt" },
-];
-
-const divingSchoolCoaches = [
-  { name: "Vera Valentina Hvidsten", role: "Nybegynnere" },
-  { name: "Marko Borojevic", role: "Nybegynnere" },
-  { name: "Anna Wæhle", role: "Nybegynnere" },
-  { name: "Jone Antonsen Holmelid", role: "Nybegynnere" },
-  { name: "Jonas Erik Thorsen", role: "Nybegynnere" },
-  { name: "Amalie Kupka", role: "Nybegynnere" },
-  { name: "Caroline Sofie Kupka", role: "Videregående" },
-  { name: "Anne Sofie Holm", role: "Stupskolen" },
-  { name: "Henrik Skomsvoll", role: "Stupskolen" },
-  { name: "Synne Pedersen Drægri", role: "Stupskolen" },
-  { name: "Sienna Pambo Sunnfør", role: "Stupskolen" },
-  { name: "Isak Børslien", role: "Stupskolen" },
-  { name: "Tuva Tveit-Sletten", role: "Stupskolen" },
-  { name: "Pia Tveit-Sletten", role: "Stupskolen" },
-];
 
 function initials(name: string) {
   return name
@@ -130,60 +111,69 @@ export default function CoachesPage() {
           </header>
 
           <div className="mt-12 grid gap-7 lg:grid-cols-2">
-            <article className="rounded-3xl bg-[#06162d] p-7 text-white shadow-sm sm:p-9">
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-300">
-                Hovedtrener
-              </p>
-              <h3 className="mt-4 text-3xl font-bold">
-                Paul Joachim Thorsen
-              </h3>
-              <p className="mt-5 leading-8 text-slate-300">
-                Paul Joachim startet som stuper i Stavanger Stupeklubb i 1988
-                og var på landslaget fra 1992 til 1999. Han har vært
-                hovedtrener i Bergen, landslagssjef og internasjonal
-                stupdommer, og har vært med på å utvikle Trener 1-kurset for
-                stup.
-              </p>
-              <div className="mt-7 flex flex-wrap gap-2">
-                {["Hovedtrener", "Internasjonal dommer", "Trenerutvikling"].map(
-                  (item) => (
+            {leadCoaches.map((coach, index) => (
+              <article
+                key={coach.slug}
+                className={
+                  index === 0
+                    ? "rounded-3xl bg-[#06162d] p-7 text-white shadow-sm sm:p-9"
+                    : "rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-9"
+                }
+              >
+                <p
+                  className={
+                    index === 0
+                      ? "text-sm font-bold uppercase tracking-[0.18em] text-cyan-300"
+                      : "text-sm font-bold uppercase tracking-[0.18em] text-cyan-700"
+                  }
+                >
+                  {coach.role}
+                </p>
+                <h3
+                  className={
+                    index === 0
+                      ? "mt-4 text-3xl font-bold"
+                      : "mt-4 text-3xl font-bold text-[#06162d]"
+                  }
+                >
+                  {coach.name}
+                </h3>
+                <p
+                  className={
+                    index === 0
+                      ? "mt-5 leading-8 text-slate-300"
+                      : "mt-5 leading-8 text-slate-600"
+                  }
+                >
+                  {coach.intro}
+                </p>
+                <div className="mt-7 flex flex-wrap gap-2">
+                  {coach.specialties.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200"
+                      className={
+                        index === 0
+                          ? "rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200"
+                          : "rounded-full bg-cyan-50 px-4 py-2 text-sm font-semibold text-cyan-900"
+                      }
                     >
                       {item}
                     </span>
-                  ),
-                )}
-              </div>
-            </article>
-
-            <article className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-9">
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-700">
-                Elitetrener
-              </p>
-              <h3 className="mt-4 text-3xl font-bold text-[#06162d]">
-                Espen Gilje Bergslien
-              </h3>
-              <p className="mt-5 leading-8 text-slate-600">
-                Espen startet med stuping i 2001 og har medaljer fra både
-                norske og nordiske mesterskap. I tillegg til arbeidet med
-                klubbens eliteutøvere er han trener på toppidrettslinjen ved
-                Amalie Skram videregående skole.
-              </p>
-              <div className="mt-7 flex flex-wrap gap-2">
-                {["Elitetrener", "Tidligere konkurransestuper", "Toppidrett"].map(
-                  (item) => (
-                    <span
-                      key={item}
-                      className="rounded-full bg-cyan-50 px-4 py-2 text-sm font-semibold text-cyan-900"
-                    >
-                      {item}
-                    </span>
-                  ),
-                )}
-              </div>
-            </article>
+                  ))}
+                </div>
+                <Link
+                  href={`/trenere/${coach.slug}`}
+                  className={
+                    index === 0
+                      ? "mt-8 inline-flex items-center gap-2 font-bold text-white underline decoration-cyan-400 decoration-2 underline-offset-8 hover:text-cyan-300"
+                      : "mt-8 inline-flex items-center gap-2 font-bold text-[#06162d] underline decoration-cyan-400 decoration-2 underline-offset-8 hover:text-cyan-700"
+                  }
+                >
+                  Les trenerprofil
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -246,33 +236,44 @@ export default function CoachesPage() {
           </header>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <article className="rounded-3xl border border-slate-200 p-7 sm:p-9">
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-700">
-                Voksengruppa
-              </p>
-              <h3 className="mt-4 text-2xl font-bold text-[#06162d]">
-                Peter Henrik Kupka
-              </h3>
-              <p className="mt-4 leading-7 text-slate-600">
-                Peter tar imot voksne i alle aldre som vil prøve stuping eller
-                hente frem igjen kunnskap fra tidligere. Han er selv aktiv
-                konkurransestuper.
-              </p>
-            </article>
-
-            <article className="rounded-3xl bg-[#06162d] p-7 text-white sm:p-9">
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-300">
-                E-sportlaget
-              </p>
-              <h3 className="mt-4 text-2xl font-bold">
-                Alexander Alsaker
-              </h3>
-              <p className="mt-4 leading-7 text-slate-300">
-                Alexander trener klubbens e-sportlag. Han er utdannet
-                ergoterapeut og har erfaring fra både fotball og boksing, i
-                tillegg til interesse for dataspill.
-              </p>
-            </article>
+            {specialCoaches.map((coach, index) => (
+              <article
+                key={coach.name}
+                className={
+                  index === 0
+                    ? "rounded-3xl border border-slate-200 p-7 sm:p-9"
+                    : "rounded-3xl bg-[#06162d] p-7 text-white sm:p-9"
+                }
+              >
+                <p
+                  className={
+                    index === 0
+                      ? "text-sm font-bold uppercase tracking-[0.18em] text-cyan-700"
+                      : "text-sm font-bold uppercase tracking-[0.18em] text-cyan-300"
+                  }
+                >
+                  {coach.role}
+                </p>
+                <h3
+                  className={
+                    index === 0
+                      ? "mt-4 text-2xl font-bold text-[#06162d]"
+                      : "mt-4 text-2xl font-bold"
+                  }
+                >
+                  {coach.name}
+                </h3>
+                <p
+                  className={
+                    index === 0
+                      ? "mt-4 leading-7 text-slate-600"
+                      : "mt-4 leading-7 text-slate-300"
+                  }
+                >
+                  {coach.text}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { eventItems, newsItems } from "@/lib/content";
+import { leadCoaches } from "@/lib/coaches";
 import { siteUrl } from "@/lib/site";
 
 const routes = [
@@ -34,5 +35,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...newsRoutes, ...eventRoutes];
+  const coachRoutes: MetadataRoute.Sitemap = leadCoaches.map((coach) => ({
+    url: `${siteUrl}/trenere/${coach.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...newsRoutes, ...eventRoutes, ...coachRoutes];
 }
