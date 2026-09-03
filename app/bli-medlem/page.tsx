@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Bli medlem",
   description:
     "Les om stupskolen, treningene og hvordan du blir medlem i Bergen Stupeklubb.",
+  alternates: {
+    canonical: "/bli-medlem",
+  },
 };
 
 const trainingSteps = [

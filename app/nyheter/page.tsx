@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Nyheter",
   description:
     "Les siste nytt om konkurranser, resultater, trening og klubbmiljøet i Bergen Stupeklubb.",
+  alternates: {
+    canonical: "/nyheter",
+  },
 };
 
 const newsTopics = [

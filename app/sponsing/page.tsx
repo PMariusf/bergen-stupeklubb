@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Sponsing",
   description:
     "Bli samarbeidspartner med Bergen Stupeklubb og bidra til aktivitet, utvikling og idrettsglede.",
+  alternates: {
+    canonical: "/sponsing",
+  },
 };
 
 const supportAreas = [

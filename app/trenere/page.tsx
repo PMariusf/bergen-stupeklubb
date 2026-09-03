@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Våre trenere",
   description:
     "Møt trenerteamet i Bergen Stupeklubb og se hvem som følger opp de ulike treningsgruppene.",
+  alternates: {
+    canonical: "/trenere",
+  },
 };
 
 function initials(name: string) {

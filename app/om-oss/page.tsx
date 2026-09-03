@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Om oss",
   description:
     "Bli kjent med Bergen Stupeklubb, fellesskapet vårt og treningsmiljøet i Ado Arena.",
+  alternates: {
+    canonical: "/om-oss",
+  },
 };
 
 const values = [

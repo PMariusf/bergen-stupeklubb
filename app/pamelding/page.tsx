@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Påmelding",
   description:
     "Send interesse for trening og finn et tilbud som passer i Bergen Stupeklubb.",
+  alternates: {
+    canonical: "/pamelding",
+  },
 };
 
 const signupSteps = [

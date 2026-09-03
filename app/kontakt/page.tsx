@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Kontakt oss",
   description:
     "Ta kontakt med Bergen Stupeklubb om trening, medlemskap, påmelding og aktiviteter.",
+  alternates: {
+    canonical: "/kontakt",
+  },
 };
 
 const helpTopics = [

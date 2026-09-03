@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Hva skjer?",
   description:
     "Se arrangementer, konkurranser, treningsleirer og aktuelle aktiviteter i Bergen Stupeklubb.",
+  alternates: {
+    canonical: "/arrangementer",
+  },
 };
 
 const eventTypes = [
