@@ -13,6 +13,7 @@ const routes = [
   { path: "/om-oss", changeFrequency: "monthly" as const, priority: 0.7 },
   { path: "/kontakt", changeFrequency: "yearly" as const, priority: 0.6 },
   { path: "/sponsing", changeFrequency: "monthly" as const, priority: 0.6 },
+  { path: "/samtykkeerklaring", changeFrequency: "yearly" as const, priority: 0.5 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
