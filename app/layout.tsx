@@ -27,13 +27,9 @@ export const metadata: Metadata = {
     "stupskole",
     "idrett",
   ],
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "nb_NO",
-    url: "/",
     siteName: "Bergen Stupeklubb",
     title: "Bergen Stupeklubb",
     description:
