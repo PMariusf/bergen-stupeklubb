@@ -153,6 +153,12 @@ export default function EventsPage() {
                   >
                     Se treningstilbudet
                   </Link>
+                  <Link
+                    href="/arrangementer/stupskolen-host-2026"
+                    className="rounded-full border border-slate-300 px-7 py-4 text-center font-bold text-[#06162d] transition hover:border-cyan-400 hover:bg-cyan-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-600"
+                  >
+                    Les mer
+                  </Link>
                 </div>
               </div>
             </div>
@@ -250,10 +256,10 @@ export default function EventsPage() {
               resultat for hele klubbmiljøet.
             </p>
             <Link
-              href="/nyheter"
+              href="/nyheter/nordisk-mesterskap-2025"
               className="mt-8 inline-flex items-center gap-2 font-bold text-[#06162d] underline decoration-cyan-400 decoration-2 underline-offset-8 transition hover:text-cyan-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-600"
             >
-              Les flere nyheter
+              Les hele saken
               <span aria-hidden="true">→</span>
             </Link>
           </div>

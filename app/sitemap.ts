@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { eventItems, newsItems } from "@/lib/content";
 import { siteUrl } from "@/lib/site";
 
 const routes = [
@@ -14,9 +15,24 @@ const routes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
+  const staticRoutes: MetadataRoute.Sitemap = routes.map((route) => ({
     url: `${siteUrl}${route.path}`,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
+
+  const newsRoutes: MetadataRoute.Sitemap = newsItems.map((item) => ({
+    url: `${siteUrl}/nyheter/${item.slug}`,
+    lastModified: item.dateTime,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  const eventRoutes: MetadataRoute.Sitemap = eventItems.map((item) => ({
+    url: `${siteUrl}/arrangementer/${item.slug}`,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...newsRoutes, ...eventRoutes];
 }

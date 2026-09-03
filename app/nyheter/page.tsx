@@ -81,15 +81,13 @@ export default function NewsPage() {
                 </div>
               </dl>
 
-              <a
-                href="https://www.bergenstupeklubb.no/nyheter/nordisk-mesterskap-2025"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                href="/nyheter/nordisk-mesterskap-2025"
                 className="mt-8 inline-flex w-fit items-center gap-2 font-bold text-white underline decoration-cyan-400 decoration-2 underline-offset-8 transition hover:text-cyan-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
               >
                 Les hele saken
-                <span aria-hidden="true">↗</span>
-              </a>
+                <span aria-hidden="true">→</span>
+              </Link>
             </div>
 
             <div className="relative min-h-80 lg:min-h-full">
@@ -150,15 +148,13 @@ export default function NewsPage() {
                   at Bergen Stupeklubb gikk til topps i begge konkurransene.
                 </p>
 
-                <a
-                  href="https://www.bergenstupeklubb.no/nyheter/bergen-stupeklubb-beste-klubb-i-bade-nm-senior-og-landsfinalen"
-                  target="_blank"
-                  rel="noreferrer"
+                <Link
+                  href="/nyheter/beste-klubb-nm-senior-og-landsfinalen"
                   className="mt-7 inline-flex items-center gap-2 font-bold text-[#06162d] underline decoration-cyan-400 decoration-2 underline-offset-8 transition hover:text-cyan-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-600"
                 >
                   Les hele saken
-                  <span aria-hidden="true">↗</span>
-                </a>
+                  <span aria-hidden="true">→</span>
+                </Link>
               </div>
             </article>
 
