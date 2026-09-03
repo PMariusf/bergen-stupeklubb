@@ -7,6 +7,7 @@ const footerLinks = [
   { href: "/nyheter", label: "Nyheter" },
   { href: "/arrangementer", label: "Hva skjer?" },
   { href: "/sponsing", label: "Sponsing" },
+  { href: "/samtykkeerklaring", label: "Bildesamtykke" },
 ];
 
 const focusClass =
